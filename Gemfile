@@ -29,4 +29,6 @@ platforms :rbx do
   gem 'rubysl'
 end
 
+gem 'rubocop'
+
 eval File.read('Gemfile-custom') if File.exist?('Gemfile-custom')
