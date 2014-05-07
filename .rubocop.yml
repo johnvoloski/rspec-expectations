@@ -1,2 +1,31 @@
 inherit_from:
   - rubocop-todo.yml
+
+# "Use alias_method instead of alias"
+# We're fine with `alias`.
+Alias:
+  Enabled: false
+
+# Warns when the class is excessively long.
+ClassLength:
+  Max: 118 # RaiseError matcher.
+
+# "Avoid the use of the case equality operator ==="
+# We prefer using `Class#===` over `Object#is_a?` because `Class#===`
+# is less likely to be monkey patched than `is_a?` on a user object.
+CaseEquality:
+  Enabled: false
+
+CollectionMethods:
+  Enabled: true
+  PreferredMethods:
+    reduce: 'inject'
+
+DoubleNegation:
+  Enabled: false
+
+# "Use snake_case for source file names."
+FileName:
+  # Not sure why this file fails this check :-(.
+  Exclude: [lib/rspec-expectations.rb]
+  Enabled: true
