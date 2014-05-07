@@ -13,7 +13,7 @@ module RSpec
         end
 
         # @private
-        def does_not_match?(actual)
+        def does_not_match?(_actual)
           raise NotImplementedError,
             "`expect(...).not_to matcher.#{conjunction} matcher` is not supported"
         end
@@ -83,7 +83,7 @@ module RSpec
 
         private
 
-          def match(expected, actual)
+          def match(_expected, actual)
             @matcher_1_matches = matcher_1.matches?(actual)
             @matcher_2_matches = matcher_2.matches?(actual)
 
@@ -107,7 +107,7 @@ module RSpec
 
         private
 
-          def match(expected, actual)
+          def match(_expected, actual)
             matcher_1.matches?(actual) || matcher_2.matches?(actual)
           end
 

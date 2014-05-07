@@ -15,7 +15,7 @@ module RSpec
         end
 
         # @private
-        def does_not_match?(actual)
+        def does_not_match?(_actual)
           raise NotImplementedError, '`expect().not_to all( matcher )` is not supported.'
         end
 
@@ -38,7 +38,7 @@ module RSpec
 
       private
 
-        def match(_, actual)
+        def match(_expected, _actual)
           index_failed_objects
           failed_objects.empty?
         end

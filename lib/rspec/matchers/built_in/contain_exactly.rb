@@ -35,7 +35,7 @@ module RSpec
 
       private
 
-        def match(expected, actual)
+        def match(_expected, _actual)
           convert_actual_to_an_array or return false
           match_when_sorted? || (extra_items.empty? && missing_items.empty?)
         end
@@ -204,7 +204,7 @@ module RSpec
           # @private
           # Starting solution that is worse than any other real solution.
           NullSolution = Class.new do
-            def self.worse_than?(other); true; end
+            def self.worse_than?(_other); true; end
           end
 
           def categorize_indexes(indexes_to_categorize, other_indexes)

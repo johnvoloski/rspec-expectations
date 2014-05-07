@@ -37,8 +37,6 @@ module RSpec
           "expected #{@actual.inspect} not to exist#{@test.validity_message}"
         end
 
-      private
-
         # @api private
         # Simple class for memoizing actual/expected for this matcher
         # and examining the match

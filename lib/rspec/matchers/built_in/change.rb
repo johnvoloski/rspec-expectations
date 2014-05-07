@@ -128,7 +128,7 @@ module RSpec
         end
 
         # @private
-        def does_not_match?(event_proc)
+        def does_not_match?(_event_proc)
           raise NotImplementedError, "`expect { }.not_to change { }.#{@relativity}()` is not supported"
         end
 
@@ -281,7 +281,7 @@ module RSpec
         end
 
         # @private
-        def does_not_match?(event_proc)
+        def does_not_match?(_event_proc)
           raise NotImplementedError, "`expect { }.not_to change { }.to()` is not supported"
         end
 

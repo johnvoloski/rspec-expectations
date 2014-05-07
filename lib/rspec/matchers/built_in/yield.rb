@@ -313,7 +313,7 @@ module RSpec
             return !@actual.empty?
           end
 
-          unless match = all_args_match?
+          unless (match = all_args_match?)
             @positive_args_failure = "yielded with unexpected arguments" +
               "\nexpected: #{surface_descriptions_in(@expected).inspect}" +
               "\n     got: #{@actual.inspect}"

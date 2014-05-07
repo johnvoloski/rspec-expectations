@@ -114,12 +114,12 @@ module RSpec
         def prevent_invalid_expectations
           if (expecting_specific_exception? || @expected_message)
             what_to_raise = if expecting_specific_exception? && @expected_message
-                                  "`expect { }.not_to raise_error(SpecificErrorClass, message)`"
-                                elsif expecting_specific_exception?
-                                  "`expect { }.not_to raise_error(SpecificErrorClass)`"
-                                elsif @expected_message
-                                  "`expect { }.not_to raise_error(message)`"
-                                end
+                              "`expect { }.not_to raise_error(SpecificErrorClass, message)`"
+                            elsif expecting_specific_exception?
+                              "`expect { }.not_to raise_error(SpecificErrorClass)`"
+                            elsif @expected_message
+                              "`expect { }.not_to raise_error(message)`"
+                            end
             specific_class_error = ArgumentError.new("#{what_to_raise} is not valid, use `expect { }.not_to raise_error` (with no args) instead")
             raise specific_class_error
           end

@@ -104,7 +104,7 @@ module RSpec
       class Be < BaseMatcher
         include BeHelpers
 
-        def initialize(*args, &block)
+        def initialize(*args)
           @args = args
         end
 

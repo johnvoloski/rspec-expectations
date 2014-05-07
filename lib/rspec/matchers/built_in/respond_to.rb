@@ -82,7 +82,7 @@ module RSpec
         end
 
         def with_arity
-          @expected_arity.nil?? "" :
+          @expected_arity.nil? ? "" :
             " with #{@expected_arity} argument#{@expected_arity == 1 ? '' : 's'}"
         end
 
