@@ -36,7 +36,7 @@ module RSpec
       private
 
         def match(_expected, _actual)
-          convert_actual_to_an_array or return false
+          return false unless convert_actual_to_an_array
           match_when_sorted? || (extra_items.empty? && missing_items.empty?)
         end
 

@@ -27,10 +27,10 @@ module RSpec
 
           # @private
           def get(klass, operator)
-            klass.ancestors.each { |ancestor|
+            klass.ancestors.each do |ancestor|
               matcher = registry[ancestor] && registry[ancestor][operator]
               return matcher if matcher
-            }
+            end
 
             nil
           end

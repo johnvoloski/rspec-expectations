@@ -86,7 +86,7 @@ module RSpec
         end
 
         def inspected_args
-          @args.collect{|a| a.inspect}
+          @args.map { |a| a.inspect }
         end
 
         def expected_to_sentence

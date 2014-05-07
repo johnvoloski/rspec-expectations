@@ -7,6 +7,7 @@ module RSpec
       class BeAKindOf < BaseMatcher
 
       private
+
         def match(expected, actual)
           actual.kind_of? expected
         end

@@ -46,7 +46,7 @@ module RSpec
         matcher = ExpectationHelper.setup(self, initial_matcher, message)
 
         return ::RSpec::Matchers::BuiltIn::PositiveOperatorMatcher.new(actual) unless initial_matcher
-        matcher.matches?(actual, &block) or ExpectationHelper.handle_failure(matcher, message, :failure_message)
+        matcher.matches?(actual, &block) || ExpectationHelper.handle_failure(matcher, message, :failure_message)
       end
 
       def self.verb
@@ -68,7 +68,7 @@ module RSpec
         matcher = ExpectationHelper.setup(self, initial_matcher, message)
 
         return ::RSpec::Matchers::BuiltIn::NegativeOperatorMatcher.new(actual) unless initial_matcher
-        !(does_not_match?(matcher, actual, &block) or ExpectationHelper.handle_failure(matcher, message, :failure_message_when_negated))
+        !(does_not_match?(matcher, actual, &block) || ExpectationHelper.handle_failure(matcher, message, :failure_message_when_negated))
       end
 
       def self.does_not_match?(matcher, actual, &block)

@@ -22,16 +22,6 @@ Alias:
 AlignParameters:
   Enabled: false
 
-# Offense count: 3
-# Cop supports --auto-correct.
-AndOr:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Blocks:
-  Enabled: false
-
 # Offense count: 35
 CaseEquality:
   Enabled: false
@@ -42,29 +32,20 @@ CaseIndentation:
   Enabled: false
 
 # Offense count: 1
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-ClassAndModuleChildren:
-  Enabled: false
-
-# Offense count: 1
 # Configuration parameters: CountComments.
 ClassLength:
   Max: 118
 
-# Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredMethods.
 CollectionMethods:
-  Enabled: false
+  Enabled: true
+  PreferredMethods:
+    reduce: 'inject'
 
 # Offense count: 3
 CyclomaticComplexity:
   Max: 10
-
-# Offense count: 1
-# Cop supports --auto-correct.
-DeprecatedHashMethods:
-  Enabled: false
 
 # Offense count: 4
 Documentation:
@@ -72,10 +53,6 @@ Documentation:
 
 # Offense count: 3
 DoubleNegation:
-  Enabled: false
-
-# Offense count: 1
-EmptyLinesAroundAccessModifier:
   Enabled: false
 
 # Offense count: 19
